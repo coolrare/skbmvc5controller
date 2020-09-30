@@ -11,7 +11,8 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +23,7 @@ namespace WebApplication1.Models
         }
     
         public int CourseID { get; set; }
+        [Required(ErrorMessage = "請輸入課程標題")]
         public string Title { get; set; }
         public int Credits { get; set; }
         public int DepartmentID { get; set; }

@@ -83,6 +83,7 @@ namespace WebApplication1.Controllers
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HandleError(ExceptionType=typeof(System.Data.Entity.Validation.DbEntityValidationException), View= "DbEntityValidationException")]
         public ActionResult Edit(int id, CourseEditViewModel course)
         {
             if (ModelState.IsValid)

@@ -1,0 +1,16 @@
+﻿@model HandleErrorInfo
+@{
+    var ex = Model.Exception as System.Data.Entity.Validation.DbEntityValidationException;
+}
+<hgroup>
+    <h1>資料庫寫入時發生錯誤！</h1>
+    <ul>
+        @foreach (var eve in ex.EntityValidationErrors)
+        {
+            foreach (var ve in eve.ValidationErrors)
+            {
+                <li>@ve.PropertyName: @ve.ErrorMessage</li>
+            }
+        }
+    </ul>
+</hgroup>
