@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -51,12 +52,5 @@ namespace WebApplication1.Controllers
             return PartialView();
         }
 
-    }
-
-    public class ViewResultTestModel
-    {
-        public int Id { get; set; } = 1;
-
-        public string Name { get; set; } = "Will";
     }
 }

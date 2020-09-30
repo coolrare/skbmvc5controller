@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication1.Models.Course>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@using (Html.BeginForm())
+{
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Credits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department.Name)
+            </th>
+        </tr>
+
+        @{
+            var data = Model.ToArray();
+        }
+
+        @for (int i = 0; i < data.Length; i++)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => data[i].CourseID)
+                    @Html.EditorFor(modelItem => data[i].Title)
+                </td>
+                <td>
+                    @Html.EditorFor(modelItem => data[i].Credits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => data[i].CreatedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => data[i].Department.Name)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <input type="submit" value="儲存變更" />
+
+}
