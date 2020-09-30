@@ -26,5 +26,12 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+
+        public ActionResult RazorTest()
+        {
+            ViewBag.List = new int[] { 1, 2, 3, 4, 5 };
+
+            return PartialView();
+        }
     }
 }
