@@ -33,5 +33,10 @@ namespace WebApplication1.Controllers
 
             return PartialView();
         }
+
+        public ActionResult MetroHome()
+        {
+            return View();
+        }
     }
 }
