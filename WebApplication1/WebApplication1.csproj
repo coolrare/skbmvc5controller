@@ -416,6 +416,7 @@
     <Content Include="Views\Shared\DbEntityValidationException.cshtml" />
     <Content Include="Views\Home\RazorTest.cshtml" />
     <Content Include="Views\Home\MetroHome.cshtml" />
+    <Content Include="Views\Shared\_LayoutMetro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
