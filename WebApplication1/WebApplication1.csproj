@@ -417,6 +417,7 @@
     <Content Include="Views\Home\RazorTest.cshtml" />
     <Content Include="Views\Home\MetroHome.cshtml" />
     <Content Include="Views\Shared\_LayoutMetro.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
