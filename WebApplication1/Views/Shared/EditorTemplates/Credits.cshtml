@@ -1,0 +1,10 @@
+﻿@model int?
+
+@*@Html.TextBox("", Model, new { @class = "form-control text-box single-line", type = "number" })*@
+
+<select name="@Html.Name("")" class="form-control text-box single-line">
+    @for (int i = 1; i <= 5; i++)
+    {
+        <option>@(i)</option>
+    }
+</select>

@@ -25,6 +25,7 @@ namespace WebApplication1.Models
         public int CourseID { get; set; }
         [Required(ErrorMessage = "請輸入課程標題")]
         public string Title { get; set; }
+        [UIHint("Credits")]
         public int Credits { get; set; }
         public int DepartmentID { get; set; }
         public System.DateTime CreatedOn { get; set; }
