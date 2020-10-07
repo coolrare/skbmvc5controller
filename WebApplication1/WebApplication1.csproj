@@ -135,6 +135,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CourseEditViewModel.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Models\CourseBatchViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MBController.cs" />
@@ -420,6 +421,12 @@
     <Content Include="Views\Home\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Credits.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Credits.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Departments\DeptCourses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
