@@ -2,9 +2,21 @@
 
 @*@Html.TextBox("", Model, new { @class = "form-control text-box single-line", type = "number" })*@
 
-<select name="@Html.Name("")" class="form-control text-box single-line">
-    @for (int i = 1; i <= 5; i++)
-    {
-        <option>@(i)</option>
-    }
-</select>
+@*<select name="@Html.Name("")" class="form-control text-box single-line">
+        @for (int i = 1; i <= 5; i++)
+        {
+            <option selected="@(Model.Value == i)">@(i)</option>
+        }
+    </select>*@
+
+@{
+    var items = new List<SelectListItem>();
+    items.Add(new SelectListItem() { Text = "1", Value = "1" });
+    items.Add(new SelectListItem() { Text = "2", Value = "2" });
+    items.Add(new SelectListItem() { Text = "3", Value = "3" });
+    items.Add(new SelectListItem() { Text = "4", Value = "4" });
+    items.Add(new SelectListItem() { Text = "5", Value = "5" });
+    var selectList = new SelectList(items, "Value", "Text", Model);
+}
+
+@Html.DropDownList("", selectList, new { @class = "form-control text-box single-line" })
