@@ -36,6 +36,11 @@ namespace WebApplication1.Controllers
             return View(department);
         }
 
+        public ActionResult DeptCourses(int id)
+        {
+            return View(db.Course.Where(p => p.DepartmentID == id));
+        }
+
         // GET: Departments/Create
         public ActionResult Create()
         {

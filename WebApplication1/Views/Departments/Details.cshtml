@@ -55,7 +55,9 @@
     <hr />
 
 
-    @Html.Partial("DeptCourses", Model.Course)
+    @*@Html.Partial("DeptCourses", Model.Course)*@
+
+    @Html.Action("DeptCourses", new { id = Model.DepartmentID })
 
 
 </div>
